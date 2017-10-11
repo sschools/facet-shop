@@ -1,5 +1,7 @@
 package com.facetshop.demo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +12,18 @@ public class Item {
     private String image;
     private int quantity;
     private double price;
+    private User user;
+
+    @JsonIgnore
+    @ManyToOne()
+    @JoinColumn(name = "user_id")
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public Item() {
     }
