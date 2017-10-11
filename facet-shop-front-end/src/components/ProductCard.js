@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ProductCard extends component {
+export default class ProductCard extends component {
   // constructor(props) {
   //   super(props)
   //   this.State = {
