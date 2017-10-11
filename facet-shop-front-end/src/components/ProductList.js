@@ -6,7 +6,9 @@ export default class ProductList extends Component {
   render() {
     return (
       <div className="container">
-        <ProductCard/>
+        <ProductCard
+          addToCart={this.props.addToCart}
+        />
       </div>
     )
   }
