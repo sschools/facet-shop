@@ -18,6 +18,7 @@ export default class Cart extends Component {
             <li className="list-group-item border-0 col-3">Quantity</li>
             <li className="list-group-item border-0 col-3">Remove</li>
           </ul>
+          
           <CartItem/>
         </div>
         <div>
