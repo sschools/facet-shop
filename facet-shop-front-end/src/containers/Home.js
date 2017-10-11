@@ -10,8 +10,8 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
-        I am the Home Screen!
+      <div className="">
+        <button className="btn btn-secondary">Click Here to Shop!</button>
       </div>
     )
   }

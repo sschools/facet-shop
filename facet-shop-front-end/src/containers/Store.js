@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 
+import Cart from "../components/Cart"
+import ProductList from "../components/ProductList"
+
 export default class Store extends Component {
   constructor(props) {
     super(props)
@@ -15,7 +18,8 @@ export default class Store extends Component {
   render() {
     return (
       <div>
-        I am the Store Screen!
+        <Cart/>
+        <ProductList/>
       </div>
     )
   }
