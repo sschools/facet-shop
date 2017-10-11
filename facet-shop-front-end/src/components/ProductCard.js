@@ -14,9 +14,9 @@ export default class ProductCard extends Component {
     return (
       <div className="card">
          <img className="card-img-top" src="" alt="Card image"/>
-          <div class="card-body">
-            <h4 class="card-title product-name">Product Name</h4>
-            <p class="card-text">Price</p>
+          <div className="card-body">
+            <h4 className="card-title product-name">Product Name</h4>
+            <p className="card-text">Price</p>
             <form >
               <input placeholder="quantity"/>
               <button type="submit"></button>
