@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class ProductCard extends component {
+export default class ProductCard extends Component {
   // constructor(props) {
   //   super(props)
   //   this.State = {
@@ -25,5 +25,4 @@ export default class ProductCard extends component {
       </div>
     )
   }
-}
 }

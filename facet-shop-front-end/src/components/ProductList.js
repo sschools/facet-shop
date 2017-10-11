@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ProductCard from './ProductCard';
 
 
-export default class ProductList extends component {
+export default class ProductList extends Component {
   render() {
     return (
       <div className="container">
