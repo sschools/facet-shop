@@ -16,27 +16,29 @@ export default class Store extends Component {
       cart: []
     }
   }
-  addToCart =(event) => {
-  event.preventDefault()
+  addToCart =(productInfo) => {
+    // console.log("productInfo", productInfo.inputVal);
   this.setState({
     item: {
       name: "product name",
       price: 9,
-      quantity: 1
-
+      quantity: productInfo.inputVal
   }})
   this.state.cart.push(this.state.item)
-  this.setState({
-    item: {}
-  })
+  // this.setState({
+  //   item: {}
+  // })
 }
 
 
   render() {
+    // console.log(this.state)
     return (
       <div>
         <Cart/>
-        <ProductList addToCart={this.addToCart}/>
+        <ProductList
+          addToCart={this.addToCart}
+        />
       </div>
     )
   }
