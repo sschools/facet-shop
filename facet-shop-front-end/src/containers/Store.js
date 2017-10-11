@@ -29,8 +29,9 @@ export default class Store extends Component {
   this.setState({
     item: {}
   })
-
 }
+
+
   render() {
     return (
       <div>
