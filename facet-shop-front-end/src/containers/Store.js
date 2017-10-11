@@ -21,16 +21,16 @@ export default class Store extends Component {
   this.setState({
     item: {
       name: "product name",
-      price: 9.99,
+      price: 9,
       quantity: 1
 
-  })
+  }})
   this.state.cart.push(this.state.item)
   this.setState({
     item: {}
   })
-  }
 
+}
   render() {
     return (
       <div>
