@@ -5,11 +5,11 @@ export default class CartItem extends Component {
 
   render() {
     return (
-      <ul className="item-card">
-        <li>Product</li>
-        <li>Price</li>
-        <li>Quantity</li>
-        <li>Trash Icon</li>
+      <ul className="d-flex">
+        <li className="list-group-item border-0 col-3">Product</li>
+        <li className="list-group-item border-0 col-3">Price</li>
+        <li className="list-group-item border-0 col-3">Quantity</li>
+        <li className="list-group-item border-0 col-3">Remove</li>
       </ul>
     )
   }
