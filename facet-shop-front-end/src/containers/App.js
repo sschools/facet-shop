@@ -27,7 +27,7 @@ constructor(){
         <HashRouter>
           <Switch>
             <Route exact path="/" component={() => <Home {...this.state}/>}/>
-            <Route exact path="/store" component={() => <Store {...this.state}/>}/>
+            <Route exact path="/store" component={() => <Store {...this.state}/>} />
           </Switch>
         </HashRouter>
       </div>
