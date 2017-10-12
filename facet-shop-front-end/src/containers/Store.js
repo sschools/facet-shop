@@ -47,7 +47,6 @@ export default class Store extends Component {
   }
 
   render() {
-    // console.log(this.state)
     return (
       <div>
         <Cart
@@ -56,6 +55,8 @@ export default class Store extends Component {
           removeFromCart={this.removeFromCart}
         />
         <ProductList
+        {...this.state}
+          products={this.props.products}
           addToCart={this.addToCart}
         />
       </div>
