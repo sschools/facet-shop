@@ -3,6 +3,14 @@ import "../styles/Cart.css"
 import CartItem from "./CartItem"
 
 export default class Cart extends Component {
+  constructor(){
+    super()
+  }
+
+  _handleEmptyCart= (event) => {
+    event.preventDefault();
+    this.props.emptyCart();
+  }
 
   render() {
     return (
@@ -13,18 +21,20 @@ export default class Cart extends Component {
         </div>
         <div className="item-catcher">
           <ul className="d-flex cart-list-fix">
-            <li className="list-group-item border-0 col-3">Product</li>
+            <li className="list-group-item border-0 col-5">Product</li>
             <li className="list-group-item border-0 col-3">Price</li>
             <li className="list-group-item border-0 col-3">Quantity</li>
-            <li className="list-group-item border-0 col-3">Remove</li>
+            <li className="list-group-item border-0 col-1"></li>
           </ul>
           <hr className="separator-line"/>
-          <CartItem/>
+          <CartItem
+            cartItems={this.props.cart}
+          />
         </div>
         <div className="bg-secondary d-flex flex-column align-items-end">
           <h3 className="">Total: $69.99</h3>
           {/* link to balance due */}
-          <button className="btn btn-light">Empty Cart</button>
+          <button onClick={this._handleEmptyCart} className="btn btn-light">Empty Cart</button>
         </div>
       </div>
     )

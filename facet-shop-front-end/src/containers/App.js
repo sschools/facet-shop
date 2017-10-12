@@ -10,13 +10,14 @@ class App extends Component {
 constructor(){
   super()
   this.state= {
-    user: {
-      name: "",
-      finalTotal: 0,
-      Items: []
-    }
+    user: ""
   }
 }
+  makeUser = (userInfo) => {
+    this.setState({
+        user: userInfo
+    })
+  }
 
   render() {
     return (
@@ -26,7 +27,7 @@ constructor(){
         </header>
         <HashRouter>
           <Switch>
-            <Route exact path="/" component={() => <Home {...this.state}/>}/>
+            <Route exact path="/" component={() => <Home {...this.state} makeUser={this.makeUser}/>}/>
             <Route exact path="/store" component={() => <Store {...this.state}/>} />
           </Switch>
         </HashRouter>
