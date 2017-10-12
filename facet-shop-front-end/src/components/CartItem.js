@@ -15,7 +15,7 @@ _handleTrash = (event) => {
 
   render() {
     return (
-      <ul className="d-flex cart-list-fix">
+      <ul className="hvr-grow d-flex cart-list-fix">
         <li className="list-group-item border-0 col-5">Product</li>
         <li className="list-group-item border-0 col-3">Price</li>
         <li className="list-group-item border-0 col-3">Quantity</li>
