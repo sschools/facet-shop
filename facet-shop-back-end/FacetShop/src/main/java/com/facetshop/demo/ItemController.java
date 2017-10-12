@@ -21,4 +21,9 @@ public class ItemController {
     public void addItem(@RequestBody Item newItem) {
         itemService.add(newItem);
     }
+
+    @RequestMapping(path = "/delete", method = RequestMethod.DELETE)
+    public void deleteItem(@RequestBody int id) {
+        itemService.delete(id);
+    }
 }
