@@ -5,6 +5,7 @@ import { Route, Switch, HashRouter } from 'react-router-dom'
 
 import Home from "./Home"
 import Store from "./Store"
+import axios from "axios"
 
 class App extends Component {
 constructor(){
@@ -13,6 +14,17 @@ constructor(){
     user: ""
   }
 }
+
+  componentDidMount(){
+      this._fetchProducts();
+   }
+   _fetchProducts = () => {
+      axios.get('http://localhost:8080')
+         .then(response => {
+            console.log("response", response);
+         })
+   }
+
   makeUser = (userInfo) => {
     this.setState({
         user: userInfo
