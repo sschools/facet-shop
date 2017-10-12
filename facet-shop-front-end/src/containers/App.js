@@ -21,8 +21,8 @@ constructor(){
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+        <header className="App-header d-flex justify-content-start align-items-center">
+          <h1 className="App-title">Facet</h1>
         </header>
         <HashRouter>
           <Switch>

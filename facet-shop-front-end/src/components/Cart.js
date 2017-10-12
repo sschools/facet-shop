@@ -7,8 +7,8 @@ export default class Cart extends Component {
   render() {
     return (
       <div className="card bg-light shopping-cart">
-        <div className="card-header cart-header d-flex">
-          <i>shoping cart icon here</i>
+        <div className="card-header cart-header bg-secondary d-flex justify-content-start align-items-center">
+          <i className="fa fa-shopping-cart fa-2x m-2"></i>
           <h3>Shopping Cart</h3>
         </div>
         <div className="item-catcher">
@@ -21,9 +21,10 @@ export default class Cart extends Component {
           <hr className="separator-line"/>
           <CartItem/>
         </div>
-        <div>
-          <h3>Total: </h3>
-          <button className="btn btn-secondary">Empty Cart</button>
+        <div className="bg-secondary d-flex flex-column align-items-end">
+          <h3 className="">Total: $69.99</h3>
+          {/* link to balance due */}
+          <button className="btn btn-light">Empty Cart</button>
         </div>
       </div>
     )
