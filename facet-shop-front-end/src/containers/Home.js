@@ -44,8 +44,8 @@ export default class Home extends Component {
   render() {
     console.log("this.state", this.state);
     return (
-      <div className="bg-dark">
-        <Button color="danger" onClick={this.toggle}>Click Here to Shop!</Button>
+      <div className="m-5">
+        <Button color="info" onClick={this.toggle}>Click Here to Shop!</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalBody>
             <Form onSubmit={this._handleSubmit}>
