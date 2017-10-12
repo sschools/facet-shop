@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import {Link} from "react-router-dom"
+
 import {
   Button,
   Modal,
@@ -39,6 +41,7 @@ export default class Home extends Component {
   _handleSubmit = (event) => {
     event.preventDefault();
     this.props.makeUser(this.state.username)
+    this.props.history.push('/store')
   }
 
   render() {
@@ -49,7 +52,11 @@ export default class Home extends Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalBody>
             <Form onSubmit={this._handleSubmit}>
-              <Input onChange={this._handleChange} placeholder="What's your name?"/>
+              <Input className=""
+                type="text"
+                onChange={this._handleChange}
+                placeholder="What's your name?"
+                />
             </Form>
           </ModalBody>
         </Modal>
