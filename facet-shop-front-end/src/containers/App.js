@@ -11,7 +11,8 @@ class App extends Component {
 constructor(){
   super()
   this.state= {
-    user: ""
+    user: "",
+    products: []
   }
 }
 
@@ -21,7 +22,10 @@ constructor(){
    _fetchProducts = () => {
       axios.get('http://localhost:8080')
          .then(response => {
+           this.setState({products: response.data})
             console.log("response", response);
+            // our array is response.data
+            // id image name price quantity
          })
    }
 
